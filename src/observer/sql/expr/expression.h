@@ -11,7 +11,7 @@ See the Mulan PSL v2 for more details. */
 //
 // Created by Wangyunlai on 2022/07/05.
 //
-
+//
 #pragma once
 
 #include <memory>
@@ -493,6 +493,7 @@ private:
 class AggregateFunctionExpr : public Expression
 {
 public:
+using Type =AggregateFunctionType;
   AggregateFunctionExpr(AggregateFunctionType type, Expression *child);
   AggregateFunctionExpr(AggregateFunctionType type, std::unique_ptr<Expression> child);
   virtual ~AggregateFunctionExpr() = default;
